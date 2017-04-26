@@ -1,0 +1,267 @@
+.challenge-component {
+  background:lightgray;
+}
+
+li {
+  list-style: none;
+}
+
+.parentMedia {
+  width: 100%;
+  height: 100%;
+  border-top: white;
+  border-bottom: white;
+}
+
+.current-viewing-row {
+  margin-top: 20px;
+}
+
+.current-viewing-box {
+  height: 100%;
+}
+
+.current-media-row {
+  border-left:gray solid 2px;
+  border-right:gray solid 2px;
+  height: 50vh;
+}
+
+.timestamp {
+  font-size: 1em;
+  margin-left: 20px;
+}
+
+.current-info {
+  padding: 15px;
+  font-size: 1em;
+  background: white;
+  border-right:gray solid 2px;
+  border-left:gray solid 2px;
+  border-bottom:gray solid 2px;
+}
+
+.current-info-timestamp {
+  float: right
+}
+
+.fixed {
+  position: fixed;
+  height: 100vh;
+  background: #8d8d8d;
+  /*background: #4d4d4d;*/
+  /*border: tomato solid;*/
+}
+
+.outerBar {
+  position: relative;
+}
+
+.main-challenge-title {
+  font-size: 1.8rem;
+  margin: 10px;
+  color: orange
+}
+
+.main-challenge-description {
+  font-size: 1em;
+}
+
+.social-button {
+  background:white;
+  box-shadow:  none;
+  border-radius: 0px;
+  border: none;
+  margin: 0.5px
+}
+
+social-button.active {
+  background:white;
+  box-shadow:  none;
+  border-radius: 0px;
+  border: none;
+}
+.comments-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.comment-box {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.chat-form {
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.comment-button {
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 3px
+}
+
+.comment-button:hover {
+  background: darkorange
+}
+
+#comments {
+  overflow-y: auto;
+  height: 75%;
+}
+
+.one-comment {
+  border: gray solid 1px;
+  border-radius: 5px;
+  background: white;
+  border-radius: 2px;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+
+.username-time-button-row {
+  margin-top: 10px;
+}
+.comment-message {
+  padding: 15px 0;
+}
+
+/*.username {
+  padding-left: 0px;
+  margin-right: 40px;
+}*/
+
+.username>a {
+  color: orange;
+  margin-left: -40px
+}
+
+.username-and-timestamp {
+  font-size: 1.2em;
+  display: inline-block;
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 0px;
+}
+
+
+.response-media {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.response-button-row {
+  background: #4d4d4d;
+}
+
+.response-buttons-top {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.response-list {
+  width: 100%;
+  height: 85vh;
+  overflow-y: scroll
+}
+
+.response-button {
+  background-color: orange;
+   height: 30px;
+   width: 90px;
+   cursor:pointer;
+   border: orange;
+   border-radius: 0px;
+   color:white;
+   margin: 55px 10px 0 10px;
+   border-radius: 3px;
+}
+
+.response-button:hover {
+   background-color: darkorange;
+   color:white;
+}
+
+.response-info {
+  /*background:#3E3E3E;*/
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.response-media-column {
+  height: 100%;
+  padding: 0;
+}
+
+.all-response-data {
+   margin-left: 0px;
+  margin-right: 0px;
+}
+
+.response-title-row {
+  font-size: 1em;
+  height: 60%
+}
+
+.response-username-row {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 15px;
+  font-size: 0.8em;
+}
+
+.parent-challenge-reminder-row {
+  height: 90px;
+  background: #FF6545;
+  color: white;
+}
+
+.original-back-button {
+  height: 30px;
+   cursor: pointer;
+   margin-top: 55px;
+   color:white;
+   padding: 5px;
+}
+
+.original-back-button:hover {
+   color: orange;
+}
+
+.one-response {
+  margin: 10px;
+  height: 20vh;
+  border: gray  1px solid;
+  border-radius: 5px;
+  background: white;
+  margin: 15px;
+}
+
+.response-data > li {
+  display: block;
+  padding: 15px 10px 15px 10px;
+}
+
+.current-viewing-title-row {
+  border-right:gray solid 2px;
+  border-left:gray solid 2px;
+  border-top:gray solid 2px;
+  min-height: 10vh;
+  background: white;
+  color: orange
+}
+
+#fileInput {
+  width: 100%;
+  padding-left: 15px;
+}

@@ -1,0 +1,99 @@
+
+.one-challenge {
+  height: 50vh;
+  border: lightgrey solid 1px;
+
+  margin: 20px;
+  position: relative;
+  background: white;
+  /*box-shadow: 4px 4px #616161;*/
+}
+
+.challenge-title-row {
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.challenge-media-row {
+  height: 50%;
+}
+
+.challenge-list-media {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.social-button {
+  background:white;
+  box-shadow:  none;
+  border-radius: 0px;
+  border: none;
+  margin: 0.5px
+}
+
+social-button.active {
+  background:white;
+  box-shadow:  none;
+  border-radius: 0px;
+  border: none;
+}
+
+.category-row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/*.category-title{
+  color: #16a79d !important;
+}*/
+
+#leader-img{
+  width:17%;
+  height: 17%;
+  display: block;
+  margin: 0 auto;
+  margin-top:10px;
+  margin-bottom:25px;
+  border: none;
+}
+
+.leader-td{
+  margin-left:30px;
+}
+
+.leader-container{
+  margin-left:-8%;
+}
+
+#medal{
+  vertical-align: text-top;
+}
+
+th{
+  color: white;
+  margin: 0 auto;
+  font-weight:bolder;
+  text-shadow: 1px 1px 3px #000000;
+  font-size: 1.5em;
+}
+
+tbody{
+border: 2px solid #D5D5D5;
+}
+
+.category-tab {
+  font-size: .9em;
+  color: orange;
+  margin-top: -10px;
+  border: orange solid 0.5px;
+  border-radius: 2px;
+  padding: 2px 10px 2px 10px;
+}
+.table-nonfluid {
+   width: 75% !important;
+   margin:0 auto;
+   /*border: 1px solid red;*/
+}

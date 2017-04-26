@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu');
+
+body{
+  font-family: 'Ubuntu', sans-serif;
+  /*background-color: white;*/
+  background-color: #E76767;
+}
+p{ 
+  font-size: 20px;
+  color: #4C4C4C;
+}
+
+h2{
+  color: black;
+  font-size: 1.3em;
+  line-height: 140%;
+  margin:80px 0 30px 0;
+}
+
+#gauntlet{
+  font-size: 1.4em !important;
+}
+
+h4{
+  color: grey;
+  font-size: 1.5em;
+  margin:20px 0 20px 0;
+}
+
+.header{
+  font-family: 'Ubuntu', sans-serif;
+  background-image: url('http://3.bp.blogspot.com/-CrEL4x_0KN0/VexfT-caT5I/AAAAAAAABgQ/vva8O-XmJMs/s1600/watchv=VWf8CXwPoqI.jpg');
+  background-size:100% 100%;
+	background-position:center;
+  height:550px;
+}
+
+#landing-title{
+  font-family: 'Bungee', cursive;
+  color: white;
+  position: relative;
+  margin: 0 auto;
+  margin-top:150px;
+  margin-left:420px;
+  margin-bottom: 30px;
+  font-size:5em;
+  font-weight:bolder;
+  text-shadow: 4px 2px 3px #000000;
+  /*border: 1px dashed red;*/
+} 
+
+.landing-cover-video{
+  position: relative;
+  margin-top:0px;
+}
+
+.video-landing {
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+}
+.video-cover{
+    height: 300px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+#gauntlet {
+  width:15%;
+  height:15%;
+  margin-top: 50px;
+}
+.description{
+  margin-top: 500px;
+  font-weight: bold;
+  /*border: 1px dashed green;*/
+}
+
+#auth {
+  border: 1px solid #ededed;
+}
+
+.landing-register {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top:50px;
+  left:0px;
+  /*border: 1px dashed red;*/
+}
+
+.landing-header-left{
+  /*background-image: url('https://img.clipartfox.com/f12ee2b00765abf3a86ccc537a501264_mac-mac-clipart-desktop_1254-1000.png'); */
+  background-repeat: no-repeat;
+  background-position-x: 280px;
+  background-position-y: 120px;
+  margin-bottom: 0px;
+  /*border: 1px dashed blue;*/
+}
+
+
+.landing-header-right{
+  height: 500px;
+  margin-top: 0px;
+}
+
+.landing-input {
+  color:black;
+  width: 100%;
+  height: 35px;
+  display: block;
+  margin:0 0 10px 0;
+  padding: 0 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  /*border-bottom: 2px solid #ebebeb;*/
+}
+
+.landing-inputButton {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  display: block;
+  color: white;
+  background-color:#16a79d;
+  margin-bottom: 10px; 
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 0 orange;
+  -moz-box-shadow: 0 5px 0 orange;
+  box-shadow: 2px 3px 0 #323232;
+}
+#agreement{
+  font-size: 0.7em;
+  display: inline-block;
+  color:grey;
+}
+
+.landing-inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 orange;
+}
+
+.landing-inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+
+.landing-inputButton:focus {
+  outline: none;
+}
+
+#icon1,#icon2,#icon3{
+  margin-bottom: 20px;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
+
+/*.col-wrapper {
+  padding: 0 150px 0 150px;
+}*/
+
+
+

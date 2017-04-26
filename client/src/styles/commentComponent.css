@@ -1,0 +1,9 @@
+.username {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.timestamp {
+  display: inline-block;
+  font-size: 60%;
+}

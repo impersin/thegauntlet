@@ -1,0 +1,21 @@
+body {
+  background:#f3f3f3;
+}
+
+.category-title-row {
+  width: 100%;
+  margin-top: 50px;
+  height: 60px;
+  color: rgb(255, 101, 69);
+  background: #616161;
+} 
+
+.category-title {
+  /*color: #16a79d !important; */
+  color: orange;
+  padding-top: 20px;
+  padding-left: 200px;
+}
+
+/*.category-title-row > h4 {
+}*/

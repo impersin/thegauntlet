@@ -1,0 +1,160 @@
+/**
+ * Profile image component
+ */
+.profile-header-container{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-header-img {
+  padding: 54px;
+}
+
+.profile-header-img > img.img-circle {
+  width: 200px;
+  height: 200px;
+  border: 4px solid #16a79d;
+}
+
+.profile-header {
+  margin-top: 43px;
+}
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+  margin-top: -19px;
+    /* z-index: 1000; */
+  text-align: center;
+}
+
+.label.label-default.rank-label {
+  background-color: #16a79d;
+  padding: 5px 10px 5px 10px;
+  margin-right: 5px;
+  border-radius: 27px;
+  color: white;
+  position: relative;
+}
+
+.profileContainer {
+  height: 90vh;
+}
+
+#picContainer {
+  width: 100%;
+}
+
+.profileInfo {
+  font-size: 20px;
+  margin-top: 34px;
+}
+
+.task-buttons {
+  float: right;
+  position: relative;
+  margin-left: 50px;
+}
+
+.profilePicture.text {
+  max-width: 100%;
+  height: auto;
+}
+
+.challenge-title-row {
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.chat-username {
+  position: relative;
+  float: center;
+  margin-left: 30%;
+  font-size: 1.5em;
+}
+
+.chat-picContainer {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px  ;
+}
+
+challenge-media-row {
+  border: 2px solid white;
+}
+
+.profilePic{
+  height: 40vh;
+  width: 40vh;
+  margin: 15px;
+  border-radius: 50%;
+  display: block;
+}
+
+.challenge.title {
+  display: block;
+}
+
+.challenge.description {
+  display: block;
+}
+
+.overallContent {
+  margin-top: 65px;
+}
+
+.editPic {
+  margin: 5px;
+  position: relative;
+  float: left;
+  left: 0;
+}
+
+.nav-tabs {
+  font-size: 20px;
+  background-color: #3E3E3E;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  border-radius: 5px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  background-color: #3E3E3E;
+  color: orange;
+}
+
+li>a {
+  color:white;
+}
+
+.back-chat {
+  float: right;
+  height: 50%;
+}
+
+.unread-notifications {
+  color: black;
+}
+
+.newmessages-chat {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  padding: 3px 3px 2px 3px;
+  background-color: red;
+  color: white;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 10px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px silver;
+  height: 50px;
+  width: 50px;
+}
+
+
+.challenge-inprofile {
+  font-size: 1em;
+}
