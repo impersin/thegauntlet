@@ -65,69 +65,68 @@ class Landing extends React.Component {
       <div>
         <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout}/>
           <div className="container-fluid text-center main-content landing-cover">
-            <div className="col-md-12 text-center landing-header">
-              <div className="row">
-                <div className="col-md-9 text-center landing-header-left">
+              <div className="row header">
+                <div className="col-md-4 col-md-offset-4 landing-header-left">
                   <h1 id="landing-title">Welcome to The<br/> Gauntlet!</h1>
                 </div>
-                <div className="col-md-3 landing-header-right">
+                <div className="col-md-3 col-md-offset-1 col-sm-6 col-sm-offset-4 col-xs-6 col-xs-offset-2">
                   <form className="landing-register" type="submit" onSubmit={this.handleSignup.bind(this)}>
                     <input type="text" placeholder="What's your Firstname?" required ref="firstname" className=" landing-input pass" />
-                    <input type="text" placeholder="What's your Lastname?" required ref="lastname"className=" landing-input pass" />
+                    <input type="text" placeholder="What's your Lasttname?" required ref="lastname"className=" landing-input pass" />
                     <input type="text" placeholder="Create a Username" required ref="username" className="landing-input pass" />
                     <input type="email" placeholder="Enter your Email" required ref="email" className="landing-input pass" />
                     <input type="password" placeholder="Create a Password"required ref="password" className="landing-input pass" />
                     <input type="password" placeholder="Confirm Password" ref="confirmPassword" className=" landing-input pass" />
                     <input type="submit" value="Join Gauntlet!" className=" landing-inputButton" />
                     <span id="agreement">
-                      By clicking "Sign up", you agree to our terms of service and privacy policy. We’ll occasionally send you account related emails.
+                      By clicking "Sign up for the Gauntlet", you agree to our terms of service and privacy policy. We’ll occasionally send you account related emails.
                     </span>
                   </form>
                 </div>
-              </div>
             </div>
-            <div className="row header">
-              <div className="col-lg-12">
-                <h2>The Gauntlet is a place to test yourself against others!<br/>
+            <div className="row">
+              <div className="col-md-12">
+                <h2>The Gauntlet is a place to test yourself against others !<br/>
                 Add your own challenge and watch others respond, or one-up another challenger</h2>
-              </div>
-            </div>
+              </div>  
+            </div> 
             <div className="row">
               <div className="col-md-4 col">
                 <h4>Create a Challenge</h4>
                   <img id="icon1"
-                  src="http://www.neurologyintranslation.com/wp-content/uploads/2011/07/video_icon.png" alt=""/>
+                  src="https://s3-us-west-1.amazonaws.com/taegyudocs/uploadVideo.png" alt=""/>
                   <p>
-                    Upload a video of your challenge
+                    Upload video of your challenge <br/>
+                    to throw down the gauntlet 
                   </p>
               </div>
             <div className="col-md-4 col">
                 <h4>Respond</h4>
-                <img id="icon2" src="https://cdn4.iconfinder.com/data/icons/seo-accessibility-usability-2-2/256/Interaction_Design-512.png" alt=""/>
+                <img id="icon2" src="https://s3-us-west-1.amazonaws.com/taegyudocs/monitor.png" alt=""/>
                 <p>
-                  Browse challenges<br/>
+                  Browse challenge<br/>
                   Think you can do better?<br/>
-                  Respond with your own video
+                  respond with your own video
                 </p>
             </div>
             <div className="col-md-4 col">
               <h4>Win</h4>
-              <img id="icon3" src="https://cdn4.iconfinder.com/data/icons/sports-and-games-line-circle/614/533_-_Podium-256.png" alt=""/>
+              <img id="icon3" src="https://s3-us-west-1.amazonaws.com/taegyudocs/stands.png" alt=""/>
               <p>
                 Earn the most votes<br/>
-                to become the champion
+                to become the champion.
               </p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div>                  
     );
   }
   }
 
 const mapStateToProps = (state) => {
   return state;
-};
+};  
 
 export default connect(mapStateToProps)(Landing);
 
