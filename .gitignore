@@ -1,0 +1,9 @@
+node_modules/
+client/public/bundle.js
+bower_components/
+*.log
+
+build/
+dist/
+client/public/bundle.js
+**/.DS_Store
