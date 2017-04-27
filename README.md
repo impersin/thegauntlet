@@ -1,6 +1,6 @@
 # Thegauntlet
 
-<img src="https://taegyu-leem.herokuapp.com/style/images/thegauntlet/cover.png" width="600px" height="400">
+<img src="https://s3-us-west-1.amazonaws.com/taegyudocs/thegauntletLanding.png" width="600px" height="400">
 
 'Thegauntlet' is a social media based web application that allows users to create custom competitions and vote on winners
 ## Team
