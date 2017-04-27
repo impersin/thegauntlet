@@ -6,13 +6,16 @@
   font-size: 2.5em;
 }
 
-
 .navbar {
   margin-bottom: 0px;
   min-height: 0px;
   background-color: #16a79d;
   color: white;
-  border-bottom:#323232 solid 3px;
+  border-bottom:#323232 solid 1px;
+}
+
+.navbar-brand{
+  color: white;
 }
 
 .add-challenge {

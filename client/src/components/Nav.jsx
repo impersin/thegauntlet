@@ -208,9 +208,16 @@ class NavBar extends React.Component {
       );
     } else {
       return (
-          <nav className="nav navbar navbar-fixed-top">
+           <div className="navbar navbar-fixed-top text-center">
             <div className="container">
-              <ul className="nav navbar-nav navbar-left">
+              <div className="navbar-header">
+                <span><a href="/" className="navbar-brand" id="gauntlet-title">THE GAUNTLET</a></span>
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span className="sr-only">Toggle Navigation</span>
+                  MENU<span className="caret"></span>
+                </button>
+             </div>
+              <ul className="nav navbar-nav collapse navbar-collapse">
                 <li>
                   <a href="/#/signup" className="navButton" onClick={this.props.handleDisplay}>Signup</a>
                 </li>
@@ -222,7 +229,7 @@ class NavBar extends React.Component {
                 </li>
               </ul>
             </div>
-          </nav>
+          </div>
       );
     }
   }
