@@ -759,7 +759,7 @@ class ProfileContent extends React.Component {
                 <div className="col-lg-6">
                   <div className="profile-header-container" onClick={() => this.onChatClick(chat)}>
                     <div className="profile-header-img">
-                      <img className="img-circle" src={'https://s3-us-west-1.amazonaws.com/thegauntletbucket421/' + chat.profilepic}/>
+                      <img className="img-circle" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + chat.profilepic}/>
                       {renderUnreadMessagesNumber()}
                       <div className="rank-label-container">
                           <span className="label label-default rank-label">{chatName}</span>
@@ -901,7 +901,7 @@ class ProfileContent extends React.Component {
         <div className="row overallContent">
           <div className='col-lg-3 profileContainer'>
             <div id='picContainer' className="row">
-              <img className='col-lg- 12 profilePic' src={'https://s3-us-west-1.amazonaws.com/thegauntletbucket421/' + this.props.user[0].profilepic} onClick={() =>{ if (isUserImageClickable(target)) { this.state.display === 'none' ? this.setState({display: 'unset'}) : this.setState({display: 'none'}); } }}/>
+              <img className='col-lg- 12 profilePic' src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + this.props.user[0].profilepic} onClick={() =>{ if (isUserImageClickable(target)) { this.state.display === 'none' ? this.setState({display: 'unset'}) : this.setState({display: 'none'}); } }}/>
             </div>
             <span className='editPic' style={{display: this.state.display}}>
               <form id='pic'>

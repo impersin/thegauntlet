@@ -83,10 +83,10 @@ let checkFile = (type, challenge) => {
   if (fileType[type.toLowerCase()]) {
     return (
       <video className="parentMedia" controls>
-        {<source src={'https://s3-us-west-1.amazonaws.com/thegauntletbucket421/' + challenge.filename} type="video/mp4"/>}
+        {<source src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} type="video/mp4"/>}
       </video>);
   } else {
-    return <img className="parentMedia" src={'https://s3-us-west-1.amazonaws.com/thegauntletbucket421/' + challenge.filename} />;
+    return <img className="parentMedia" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
     // return <img className="parentMedia" src="http://www.jacksonhole.com/blog/wp-content/uploads/whiteford.jpg" />;
   }
 };
