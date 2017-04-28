@@ -22,6 +22,7 @@ class NavBar extends React.Component {
     var fd = new FormData(document.querySelector('#file'));
     if (this.refs.video.value) {
       this.setState({display: 'block'});
+      console.log('hitting');
       $.ajax({
         url: '/api/s3',
         type: 'POST',
@@ -30,7 +31,6 @@ class NavBar extends React.Component {
         contentType: false,   // tell jQuery not to set contentType
         success: function(resp) {
           let created_at = new Date().getTime();
-
           $.ajax({
             url: '/api/challenge',
             type: 'POST',
