@@ -14,6 +14,6 @@ module.exports = function(file, res) {
         console.error(err);
       }
     });
-    res.json(file.originalFilename);
+    res.send(file.originalFilename);
   });
 };
