@@ -87,7 +87,6 @@ let checkFile = (type, challenge) => {
       </video>);
   } else {
     return <img className="parentMedia" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
-    // return <img className="parentMedia" src="http://www.jacksonhole.com/blog/wp-content/uploads/whiteford.jpg" />;
   }
 };
 

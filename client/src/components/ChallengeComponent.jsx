@@ -285,7 +285,7 @@ class ChallengeComponent extends React.Component {
     let checkForOriginalChallenge = (currentVideoID) => {
       if (parseInt(window.sessionStorage.challengeId) !== currentVideoID) {
         return (    
-      <h4 className="original-back-button" onClick={() => { this.backToOriginalChallenge(window.sessionStorage.challengeId); }}>BACK TO ORIGINAL CHALLENGE</h4>
+      <button type="button" className="original-back-button btn btn-info" onClick={() => { this.backToOriginalChallenge(window.sessionStorage.challengeId); }}>BACK TO ORIGINAL CHALLENGE</button>
         );    
         return <div></div>;
       }

@@ -28,7 +28,6 @@ class Dash extends React.Component {
       $.get('/api/chats', {
         username: window.sessionStorage.username
       }).done(data => {
-        console.log("get chats", data)
         data.forEach(chat => {
           outer.props.dispatch(actions.getChats(data));
           if (chat.new === 1) {
@@ -81,28 +80,23 @@ class Dash extends React.Component {
         <h4 className="category-title">{`Viewing ${this.props.currentCategory} challenges`}</h4>
       );
     };
-
-
     return (
       <div className="container-fluid">
         <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout} editProfile={this.props.editProfile}/>
-          <div className="row first-row">
-            <div className="col-md-2 left-fixed">
+          
+          <div className="row first-row"> 
+            <div className="col-md-2 hidden-sm hidden-xs left-fixed">
               <SideNav />
             </div>
           </div>
-          <div className="row main-row">
-          <div className="category-title-row text-center">
-            {whichCategory()}
-          </div>
-            <div className="col-md-9 col-md-offset-3">
 
-                <div className="row">
+          <div className="row category-title-row">
+            <div className="col-md-3 col-md-offset-5 text-center">{whichCategory()}</div>
+            <div className="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+              <div className="row">
                   <ChallengeList dispatch={this.props.dispatch} />
-                </div>
-
+              </div>
             </div>
-
           </div>
       </div>
     );

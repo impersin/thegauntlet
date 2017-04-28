@@ -146,47 +146,52 @@ class NavBar extends React.Component {
       return (
         <nav className="nav navbar navbar-fixed-top">
             <div className="container">
-              <ul className="nav navbar-nav navbar-left">
-                <li>
-                  <span><a href="/#/dash" className="navButton" id="gauntlet-title">THE GAUNTLET</a></span>
-                </li>
-              <ul className="nav navbar-nav add-challenge">
-                <li className="dropdown">
-                  <a href="javascript: void(0)" className="dropdown-toggle navButton" data-toggle="dropdown" role="button" aria-haspopup="true"><span className="glyphicon glyphicon-plus"></span>Add Your Challenge!</a>
-                  <ul className="dropdown-menu">
-                    <form id="challenge" style={{width: '300px', padding: '15px'}}>
+              <div className="navbar-header">
+                <span><a href="/#/dash" className="navbar-brand" id="gauntlet-title">THE GAUNTLET</a></span>
+                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span className="sr-only">Toggle Navigation</span>
+                  MENU<span className="caret"></span>
+                </button>
+                </div> 
+              <ul className="nav navbar-nav navbar-left collapse navbar-collapse">
+          
+                <ul className="nav navbar-nav add-challenge text-center">
+                  <li className="dropdown">
+                    <a href="javascript: void(0)" className="dropdown-toggle navButton" data-toggle="dropdown" role="button" aria-haspopup="true"><span className="glyphicon glyphicon-plus"></span>Add Your Challenge!</a>
+                    <ul className="dropdown-menu">
+                      <form id="challenge" style={{width: '300px', padding: '15px'}}>
 
-                      <div className="form-group">
-                        <li className="nav-label">Name it!</li>
-                        <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
-                      </div>
-                      <div className="form-group">
-                        <li className="nav-label">Describe it!</li>
-                        <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
-                      </div>
-                      <div className="form-group" >
-                        <li className="nav-label">Pick a category!</li>
-                        <select className="form-control" required ref="category">
-                          <option>Charity</option>
-                          <option>Gaming</option>
-                          <option>Fitness</option>
-                          <option>Funny</option>
-                          <option>Music</option>
-                          <option>Sports</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </form>
-                    <form ref="file" id="file">
-                      <li className="nav-label-file">Upload your video or image...</li>
-                      <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
-                    </form>
-                    <center><li onClick={this.handleSubmit} className="btn btn-default" id="fileSubmit">Submit</li></center>
-                  </ul>
-                </li>
+                        <div className="form-group">
+                          <li className="nav-label">Name it!</li>
+                          <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
+                        </div>
+                        <div className="form-group">
+                          <li className="nav-label">Describe it!</li>
+                          <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
+                        </div>
+                        <div className="form-group" >
+                          <li className="nav-label">Pick a category!</li>
+                          <select className="form-control" required ref="category">
+                            <option>Charity</option>
+                            <option>Gaming</option>
+                            <option>Fitness</option>
+                            <option>Funny</option>
+                            <option>Music</option>
+                            <option>Sports</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                      </form>
+                      <form ref="file" id="file">
+                        <li className="nav-label-file">Upload your video or image...</li>
+                        <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
+                      </form>
+                      <center><li onClick={this.handleSubmit} className="btn btn-default" id="fileSubmit">Submit</li></center>
+                    </ul>
+                  </li>
+                </ul>
               </ul>
-              </ul>
-              <ul className="nav navbar-nav navbar-right">
+              <ul className="nav navbar-nav navbar-right text-center collapse navbar-collapse">
                 <li>
                   <span className="navbar-text">Logged in as <a href="javascript: void(0)" onClick={()=> this.goToProfilePage()} className="navbar-link username-nav">{window.sessionStorage.username}</a></span>
                 </li>
