@@ -3,12 +3,11 @@ const favorites = require('../models/favorites');
 const votes = require('../models/votes.js');
 const downvotes = require('../models/downvotes.js');
 const db = require('../index.js');
-const s3 = require('./s3Ctrl.js');
+const awsS3 = require('./s3Ctrl.js');
 
 module.exports = {
   addOne: (req, res) => {
     const challenge = req.body;
-    console.log(req.session);
     db.select('scott')
     .from('users')
     .where({username: req.session.displayName || req.body.username})
@@ -59,8 +58,7 @@ module.exports = {
   },
 
   s3: (req, res) => {
-    // s3(req.files.video, res);
-    res.json(req.files.video.originalFilename);
+    awsS3(req.files.video, res);
   },
 
   getAll: (req, res) => {
@@ -85,12 +83,11 @@ module.exports = {
     } else {
 
       let user_id = req.query.user_id;
-      console.log('user_id', typeof user_id)
       db.select().from('challenges').where({user_id: user_id}).then(challenges => {
-        console.log('challenges', challenges)
+        //console.log('challenges', challenges)
 
         db.select().from('challenges').whereNot({parent_id: null}).then(data => {
-          console.log('data', data)
+          //console.log('data', data)
           res.json(data);
         });
       });
@@ -98,7 +95,7 @@ module.exports = {
   },
 
   getSingleChallengeById: (req, res) => {
-    console.log('SINGLE CHALLENGE ID', req.query.id);
+    //console.log('SINGLE CHALLENGE ID', req.query.id);
     let challengeId = req.query.id;
     db.select().from('challenges').where('id', '=', challengeId)
       .then(challenge => {
