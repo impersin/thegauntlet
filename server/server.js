@@ -12,8 +12,8 @@ const app = express();
 const multipartyMiddleware = multiparty();
 // using session middleware
 app.use(require('express-session')({
-  key: 'session',
-  secret: 'SUPER SECRET SECRET',
+  key: process.env.SESSION || 'session',
+  secret: process.env.SECRET || 'SUPER SECRET SECRET',
   store: new MySQLStore({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USERNAME || 'root',
