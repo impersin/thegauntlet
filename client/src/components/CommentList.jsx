@@ -14,7 +14,7 @@ class CommentList extends React.Component {
   commentSubmit(e) {
     e.preventDefault();
     let outer = this;
-    let created_at = new Date().getTime();
+    let created_at = new Date().getTime(); 
     let comments = {
       comment: this.refs.comment.value,
       challenge_id: window.sessionStorage.challengeId,
@@ -41,7 +41,7 @@ class CommentList extends React.Component {
 
     return (
     <div className="row comments-row">
-      <div className='comment-box col-lg-6 col-lg-offset-1'>
+      <div className='comment-box col-md-8 col-md-offset-2'>
          <form onSubmit={this.commentSubmit} className='chat-form'>
           <textarea name="comment" required ref="comment" placeholder="Enter comment..."></textarea>
           <button className="button comment-button">COMMENT</button>
