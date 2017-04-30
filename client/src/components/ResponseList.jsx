@@ -14,7 +14,7 @@ class ResponseList extends React.Component {
   render() {
     if (this.props.responses.length) {
       return (
-      <div className="response-list container">
+      <div className="col-md-4 col-md-offset-0 col-sm-4 col-xs-10 col-xs-offset-1 response-list">
         {this.props.responses.map((response, i) =>
           <ResponseComponent response={response} onResponseTitleClick={this.props.onResponseTitleClick} key={i} />
         )}
