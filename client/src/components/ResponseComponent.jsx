@@ -89,18 +89,23 @@ class ResponseComponent extends React.Component {
       let timeDifferenceInSeconds = (new Date().getTime() - parseInt(this.props.response.created_at)) / 1000;
       return (
         <div className="one-response row">
-          <div className="col-lg-6 response-info">
+          <div className="col-md-6 response-info">
             {checkFile(this.props.response.filename.split('.').pop(), this.props.response)}<br/>
           </div>
-          <div className="col-lg-6 response-info text-center">
+          <div className="col-md-6 response-info text-center">
             <div className="row all-response-data response-title-row">
               <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>{this.props.response.title}</a>
+            </div>
+            <div className="row all-response-data response-username-row">
+              <Link onClick={() => this.onUsernameClick(this.props.response)} className="response-username">{this.props.response.username + ' '}</Link>
             </div>
             <div className="row all-response-data response-votebuttons-row">
               {voteButtons(this.props, this.props.response.id, this.props.response.upvotes, this, 'btn-md')}
             </div>
-            <div className="row all-response-data response-username-row">
-              <Link onClick={() => this.onUsernameClick(this.props.response)} className="response-username">{this.props.response.username + ' '}</Link>
+            <div className="row all-response-data response-watch-row">
+              <button className="btn-default" id="watch-btn">
+                <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>WATCH</a>
+              </button>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ li {
 }
 
 .current-viewing-row {
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .current-viewing-box {
@@ -46,16 +46,15 @@ li {
 }
 
 .fixed {
-  position: fixed;
-  height: 100vh;
+  height: 100%;
   background: #8d8d8d;
   /*background: #4d4d4d;*/
   /*border: tomato solid;*/
 }
 
-.outerBar {
+/*.outerBar {
   position: relative;
-}
+}*/
 
 .main-challenge-title {
   font-size: 1.8rem;
@@ -97,7 +96,6 @@ textarea {
 }
 
 .chat-form {
-  width: 70%;
   margin-bottom: 10px;
 }
 
@@ -170,7 +168,7 @@ textarea {
 
 .response-list {
   width: 100%;
-  height: 85vh;
+  height: 100%;
   overflow-y: scroll
 }
 
@@ -182,8 +180,7 @@ textarea {
    border: orange;
    border-radius: 0px;
    color:white;
-   margin: 55px 10px 0 10px;
-   border-radius: 3px;
+   margin: 6px 10px 0px 10px;
 }
 
 .response-button:hover {
@@ -195,7 +192,7 @@ textarea {
   /*background:#3E3E3E;*/
   height: 100%;
   padding: 0;
-  position: relative;
+  margin:0 0 5px 0;
 }
 
 .response-media-column {
@@ -209,8 +206,9 @@ textarea {
 }
 
 .response-title-row {
+  margin-top:15px;
   font-size: 1em;
-  height: 60%
+  height: 25%
 }
 
 .response-username-row {
@@ -220,17 +218,17 @@ textarea {
   font-size: 0.8em;
 }
 
-.parent-challenge-reminder-row {
-  height: 90px;
+.original-back-button-row {
+  margin-top: 20px;
   color: white;
 }
 
 .original-back-button {
   height: 30px;
-   cursor: pointer;
-   margin-top: 55px;
-   color:white;
-   padding: 5px;
+  cursor: pointer;
+  /*margin-top: 55px;*/
+  color:white;
+  padding: 5px;
 }
 
 .original-back-button:hover {
@@ -238,12 +236,12 @@ textarea {
 }
 
 .one-response {
-  margin: 10px;
-  height: 20vh;
+  margin: 5px;
+  min-width: 125px;
+  height: 100%;
   border: gray  1px solid;
   border-radius: 5px;
   background: white;
-  margin: 15px;
 }
 
 .response-data > li {
@@ -263,4 +261,7 @@ textarea {
 #fileInput {
   width: 100%;
   padding-left: 15px;
+}
+.temp{
+  /*width:50px !important;*/
 }

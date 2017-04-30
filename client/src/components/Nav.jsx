@@ -19,10 +19,10 @@ class NavBar extends React.Component {
 
   handleSubmit() {
     let outer = this;
-    var fd = new FormData(document.querySelector('#file'));
-    if (this.refs.video.value) {
+    let fd = new FormData(document.querySelector('#file'));
+    let extention = this.refs.video.value.slice(-3);
+    if (extention === 'mp4') {
       this.setState({display: 'block'});
-      console.log('hitting');
       $.ajax({
         url: '/api/s3',
         type: 'POST',
@@ -54,7 +54,7 @@ class NavBar extends React.Component {
         }
       });
     } else {
-      alert('Please submit a file');
+      alert('Please submit a video file');
     }
   }
 
