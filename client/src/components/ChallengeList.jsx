@@ -210,7 +210,7 @@ class ChallengeList extends React.Component {
       if ((challenge && challenge.category === this.props.currentCategory) || (challenge && (this.props.currentCategory === 'all' || 'recent' || 'popular'))) {
         let timeDifferenceInSeconds = (new Date().getTime() - parseInt(challenge.created_at)) / 1000;
         return (
-          <div className="col-md-3 col-md-offset-2 text-center one-challenge" key={i}>
+          <div className="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-0 col-xs-10 text-center one-challenge" key={i}>
             <div className="row challenge-title-row">
               <h5 onClick={() => this.onChallengeTitleClick(challenge)} className="challenge-title"><Link to={'/challenge'}>{challenge.title}</Link></h5>
             </div>  
