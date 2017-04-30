@@ -89,10 +89,10 @@ class ResponseComponent extends React.Component {
       let timeDifferenceInSeconds = (new Date().getTime() - parseInt(this.props.response.created_at)) / 1000;
       return (
         <div className="one-response row">
-          <div className="col-md-6 col-sm-6 col-xs-6 response-info">
+          <div className="col-md-8 col-sm-6 col-xs-8 response-info">
             {checkResFile(this.props.response.filename.split('.').pop(), this.props.response)}
           </div>
-          <div className="col-md-6 col-sm-6 col-xs-6 response-info text-center">
+          <div className="col-md-4 col-sm-6 col-xs-3 response-info text-center">
             <div className="row all-response-data response-title-row">
               <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>{this.props.response.title}</a>
             </div>
