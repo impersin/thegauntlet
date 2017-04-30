@@ -295,55 +295,20 @@ class ChallengeComponent extends React.Component {
       let timeDifferenceInSeconds = (new Date().getTime() - this.state.currentVideo.created_at) / 1000;
       return (
         <div className="container-fluid challenge-component">
-        <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout} editProfile={this.props.editProfile}/>
-          <div className='row mainRow'>
-            <div className="col-lg-4 col-lg-offset-8 mainRowColumn outerBar">
-              <div className="col-lg-4 fixed">
-                <div className="row text-center response-button-row">
-                  <div className="response-buttons-top">
-                    <span className="dropdown">
-                      <button href="javascript: void(0)" className="dropdown-toggle response-button" data-toggle="dropdown" role="button" aria-haspopup="true">RESPOND<span className="caret"></span></button>
-                      <div className="dropdown-menu">
-                        <form id="challenge" style={{width: '300px', padding: '15px'}}>
-                          <div className="form-group">
-                            <div className="nav-label">Name it!</div>
-                            <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
-                          </div>
-                          <div className="form-group">
-                            <div className="nav-label">Describe it!</div>
-                            <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
-                          </div>
-                        </form>
-                        <form ref="file" id="upload">
-                          <div className="nav-label-file">Upload your video or image...</div>
-                          <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
-                        </form>
-                        <center><div onClick={this.handleSubmit} className="btn btn-default">Submit</div></center>
-                      </div>
-                    </span>
-                    <button className="button response-button" onClick={() => { this.sortResponses('recent'); }}>RECENT</button>
-                    <button className="button response-button" onClick={() => { this.sortResponses('top'); }}>TOP</button>
-                  </div>
+          <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout} editProfile={this.props.editProfile}/>
+            <div className='row mainRow'>
+            
+            <div className="row current-viewing-row">
+              <div className="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+                <div className="row current-viewing-title-row text-center">
+                  <p className='main-challenge-title'>{this.state.currentVideo.title}</p>
                 </div>
-                <ResponseList onResponseTitleClick={this.onResponseTitleClick}/>
-              </div>
-            </div>
-          </div>
-          <div className="row parent-challenge-reminder-row">
-            <div className="col-md-8 text-center">
-              {checkForOriginalChallenge(this.state.currentVideo.id)}
-            </div>
-          </div>
-          <div className="row current-viewing-row">
-           <div className="col-lg-6 col-lg-offset-1 current-viewing-box">
-              <div className="row current-viewing-title-row text-center">
-                <p className='main-challenge-title'>{this.state.currentVideo.title}</p>
-              </div>
-              <div className='row current-media-row'>
-                {checkFile(this.state.currentVideo.filename.split('.').pop(), this.state.currentVideo)}
-              </div>
+                <div className='row current-media-row'>
+                  {checkFile(this.state.currentVideo.filename.split('.').pop(), this.state.currentVideo)}
+                </div>
+
                 <div className="row current-info">
-                  <div className="col-md-12">
+                  <div className="col-md-8 col-md-offset-1 col-sm-6 col-sm-offset-1">
                     <div className="row">
                       <ul>
                         <li className="username username-and-timestamp"><a href="javascript:void(0)" onClick={() => { this.onUsernameClick(this.state.currentvideo); }}>{this.state.currentVideo.username}</a></li>
@@ -357,11 +322,46 @@ class ChallengeComponent extends React.Component {
                     <div className="row">
                       <p className='main-challenge-description'>{this.state.currentVideo.description}</p>
                     </div>
+                  </div>
+                </div>
+                <div className="row parent-challenge-reminder-row">
+                  <div className="col-md-8 col-md-offset-2 text-center original-back-button-row">
+                    {checkForOriginalChallenge(this.state.currentVideo.id)}
+                  </div>
+                </div>
+                <CommentList /> 
+              </div>
+                <div className="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 fixed">
+                  <div className="row text-center response-button-row">
+                    <div className="response-buttons-top">
+                      <span className="dropdown">
+                        <button href="javascript: void(0)" className="dropdown-toggle response-button" data-toggle="dropdown" role="button" aria-haspopup="true">RESPOND<span className="caret"></span></button>
+                        <div className="dropdown-menu">
+                          <form id="challenge" style={{width: '300px', padding: '15px'}}>
+                            <div className="form-group">
+                              <div className="nav-label">Name it!</div>
+                              <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
+                            </div>
+                            <div className="form-group">
+                              <div className="nav-label">Describe it!</div>
+                              <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
+                            </div>
+                          </form>
+                          <form ref="file" id="upload">
+                            <div className="nav-label-file">Upload your video or image...</div>
+                            <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
+                          </form>
+                          <center><div onClick={this.handleSubmit} className="btn btn-default">Submit</div></center>
+                        </div>
+                      </span>
+                      <button className="button response-button" onClick={() => { this.sortResponses('recent'); }}>RECENT</button>
+                      <button className="button response-button" onClick={() => { this.sortResponses('top'); }}>TOP</button>
+                    </div>
+                  </div>
+                  <ResponseList onResponseTitleClick={this.onResponseTitleClick}/>
                 </div>
               </div>
-            </div>
           </div>
-          <CommentList />
       </div>
       );
     }
