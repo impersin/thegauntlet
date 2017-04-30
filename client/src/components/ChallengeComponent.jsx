@@ -285,7 +285,7 @@ class ChallengeComponent extends React.Component {
     let checkForOriginalChallenge = (currentVideoID) => {
       if (parseInt(window.sessionStorage.challengeId) !== currentVideoID) {
         return (    
-      <button type="button" className="original-back-button btn btn-info" onClick={() => { this.backToOriginalChallenge(window.sessionStorage.challengeId); }}>BACK TO ORIGINAL CHALLENGE</button>
+      <button type="button" className="original-back-button btn" onClick={() => { this.backToOriginalChallenge(window.sessionStorage.challengeId); }}>BACK TO ORIGINAL CHALLENGE</button>
         );    
         return <div></div>;
       }
@@ -296,10 +296,10 @@ class ChallengeComponent extends React.Component {
       return (
         <div className="container-fluid challenge-component">
           <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout} editProfile={this.props.editProfile}/>
-            <div className='row mainRow'>
+            <div className='row container-fluid'>
             
             <div className="row current-viewing-row">
-              <div className="col-md-6 col-md-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+              <div className="col-md-6 col-sm-6 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                 <div className="row current-viewing-title-row text-center">
                   <p className='main-challenge-title'>{this.state.currentVideo.title}</p>
                 </div>
@@ -331,35 +331,33 @@ class ChallengeComponent extends React.Component {
                 </div>
                 <CommentList /> 
               </div>
-                <div className="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-3 col-xs-offset-1 fixed">
-                  <div className="row text-center response-button-row">
-                    <div className="response-buttons-top">
-                      <span className="dropdown">
-                        <button href="javascript: void(0)" className="dropdown-toggle response-button" data-toggle="dropdown" role="button" aria-haspopup="true">RESPOND<span className="caret"></span></button>
-                        <div className="dropdown-menu">
-                          <form id="challenge" style={{width: '300px', padding: '15px'}}>
-                            <div className="form-group">
-                              <div className="nav-label">Name it!</div>
-                              <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
-                            </div>
-                            <div className="form-group">
-                              <div className="nav-label">Describe it!</div>
-                              <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
-                            </div>
-                          </form>
-                          <form ref="file" id="upload">
-                            <div className="nav-label-file">Upload your video or image...</div>
-                            <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
-                          </form>
-                          <center><div onClick={this.handleSubmit} className="btn btn-default">Submit</div></center>
-                        </div>
-                      </span>
-                      <button className="button response-button" onClick={() => { this.sortResponses('recent'); }}>RECENT</button>
-                      <button className="button response-button" onClick={() => { this.sortResponses('top'); }}>TOP</button>
+                    <div className="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-12 text-center fixed">
+                      <div className="response-buttons-top">
+                        <span className="dropdown">
+                          <button href="javascript: void(0)" className="dropdown-toggle response-button" data-toggle="dropdown" role="button" aria-haspopup="true">RESPOND<span className="caret"></span></button>
+                          <div className="dropdown-menu">
+                            <form id="challenge" style={{width: '300px', padding: '15px'}}>
+                              <div className="form-group">
+                                <div className="nav-label">Name it!</div>
+                                <input className="form-control" type="text" placeholder="Name your challenge" required ref="title" name="title"/>
+                              </div>
+                              <div className="form-group">
+                                <div className="nav-label">Describe it!</div>
+                                <input className="form-control" type="text" placeholder="Description" required ref="description" name="description"/>
+                              </div>
+                            </form>
+                            <form ref="file" id="upload">
+                              <div className="nav-label-file">Upload your video or image...</div>
+                              <input id="fileInput" type="file" placeholder="video or image" required ref="video" name="video"/>
+                            </form>
+                            <center><div onClick={this.handleSubmit} className="btn btn-default">Submit</div></center>
+                          </div>
+                        </span>
+                        <button className="button response-button" onClick={() => { this.sortResponses('recent'); }}>RECENT</button>
+                        <button className="button response-button" onClick={() => { this.sortResponses('top'); }}>TOP</button>
+                      </div>
                     </div>
-                  </div>
                   <ResponseList onResponseTitleClick={this.onResponseTitleClick}/>
-                </div>
               </div>
           </div>
       </div>
