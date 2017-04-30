@@ -4,7 +4,7 @@ import actions from '../../redux/actions.js';
 import $ from 'jquery';
 import css from '../styles/response.css';
 import { Link } from 'react-router';
-import { voteButtons, checkFile } from '../utils/helpers';
+import { voteButtons, checkFile, checkResFile } from '../utils/helpers';
 
 class ResponseComponent extends React.Component {
   constructor(props) {
@@ -89,10 +89,10 @@ class ResponseComponent extends React.Component {
       let timeDifferenceInSeconds = (new Date().getTime() - parseInt(this.props.response.created_at)) / 1000;
       return (
         <div className="one-response row">
-          <div className="col-md-6 response-info">
-            {checkFile(this.props.response.filename.split('.').pop(), this.props.response)}<br/>
+          <div className="col-md-6 col-sm-6 col-xs-6 response-info">
+            {checkResFile(this.props.response.filename.split('.').pop(), this.props.response)}
           </div>
-          <div className="col-md-6 response-info text-center">
+          <div className="col-md-6 col-sm-6 col-xs-6 response-info text-center">
             <div className="row all-response-data response-title-row">
               <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>{this.props.response.title}</a>
             </div>
@@ -103,7 +103,7 @@ class ResponseComponent extends React.Component {
               {voteButtons(this.props, this.props.response.id, this.props.response.upvotes, this, 'btn-md')}
             </div>
             <div className="row all-response-data response-watch-row">
-              <button className="btn-default" id="watch-btn">
+              <button className="" id="watch-btn">
                 <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>WATCH</a>
               </button>
             </div>

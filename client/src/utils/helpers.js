@@ -82,14 +82,28 @@ let checkFile = (type, challenge) => {
   };
   if (fileType[type.toLowerCase()]) {
     return (
-      <video className="parentMedia" controls>
+      <video className="parentMedia parentMedia-video" controls>
         {<source src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} type="video/mp4"/>}
       </video>);
   } else {
-    return <img className="parentMedia" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
+    return <img className="parentMedia parentMedia-image" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
   }
 };
 
+let checkResFile = (type, challenge) => {
+  const fileType = {
+    'mp4': 'THIS IS A VIDEO!',
+    'mov': 'THIS WORKS TOO'
+  };
+  if (fileType[type.toLowerCase()]) {
+    return (
+      <video className="resMedia resMedia-video" controls>
+        {<source src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} type="video/mp4"/>}
+      </video>);
+  } else {
+    return <img className="resMedia resMedia-image" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
+  }
+};
 
   
 let taskButtons = (comment, state, context) => {
@@ -173,6 +187,7 @@ export {
   voteButtons, 
   calculateTime, 
   checkFile, 
+  checkResFile,
   taskButtons,
-  whichFollowButton 
+  whichFollowButton
 };
