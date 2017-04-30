@@ -1,12 +1,10 @@
 
 .one-challenge {
   height: 50vh;
-  /*border: 1px solid #16a79d;*/
-  /*border: 1px solid black;*/
   border: 1px solid grey;
   margin: 20px;
   background: white;
-  /*box-shadow: 4px 4px #616161;*/
+  overflow: auto;
 }
 
 .challenge-title-row {
@@ -45,10 +43,6 @@ social-button.active {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-/*.category-title{
-  color: #16a79d !important;
-}*/
 
 #leader-img{
   width:17%;
