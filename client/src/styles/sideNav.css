@@ -7,7 +7,7 @@
 .left-fixed {
   position: fixed;
   height: 100vh;
-  background: #414141;
+  /*background: #414141;*/
 }
 
 .side-nav {
@@ -22,9 +22,7 @@
   width: 80%;
   color: #16a79d;
   background-color: white; 
-  border: solid #16a79d 2px;
-  border-radius: 5px;
-
+  border:1px solid #16a79d;
   /*-webkit-box-shadow: 0 5px 0 #2CADAD;
   -moz-box-shadow: 0 5px 0 #2CADAD;
   box-shadow: 2px 3px 0 #2CADAD;*/
@@ -34,7 +32,7 @@
   top: 2px;
   /*-webkit-box-shadow: 0 0 0 #2CADAD;
   -moz-box-shadow: 0 0 0 #2CADAD;*/
-  box-shadow: 0 3px 0 orange;
+  box-shadow: 1px 1px 1px #16a79d;
 }
 .list-item:active {
   margin-top: 5px;

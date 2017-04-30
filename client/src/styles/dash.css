@@ -1,5 +1,5 @@
 body {
-  background:#f3f3f3;
+  background:lightgrey;
 }
 
 .category-title-row {
@@ -9,9 +9,6 @@ body {
 } 
 
 .category-title {
-  /*color: #16a79d !important; */
-  color: orange;
+  color: #16a79d;
 }
 
-/*.category-title-row > h4 {
-}*/

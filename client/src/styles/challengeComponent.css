@@ -8,7 +8,7 @@ li {
 
 .parentMedia {
   width: 100%;
-  height: 100%;
+  height: 90%;
   border-top: white;
   border-bottom: white;
 }
@@ -47,19 +47,12 @@ li {
 
 .fixed {
   height: 100%;
-  background: #8d8d8d;
-  /*background: #4d4d4d;*/
-  /*border: tomato solid;*/
 }
-
-/*.outerBar {
-  position: relative;
-}*/
 
 .main-challenge-title {
   font-size: 1.8rem;
   margin: 10px;
-  color: orange
+  color: #337ab7
 }
 
 .main-challenge-description {
@@ -100,7 +93,7 @@ textarea {
 }
 
 .comment-button {
-  background: orange;
+  background: #16a79d;
   color: white;
   border: none;
   border-radius: 3px
@@ -131,13 +124,8 @@ textarea {
   padding: 15px 0;
 }
 
-/*.username {
-  padding-left: 0px;
-  margin-right: 40px;
-}*/
-
 .username>a {
-  color: orange;
+  color: #337ab7;
   margin-left: -40px
 }
 
@@ -149,104 +137,17 @@ textarea {
   margin-left: 0px;
 }
 
-
-.response-media {
-  width: 100%;
-  height: 100%;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.response-button-row {
-  background: #4d4d4d;
-}
-
-.response-buttons-top {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.response-list {
-  width: 100%;
-  height: 100%;
-  overflow-y: scroll
-}
-
-.response-button {
-  background-color: orange;
-   height: 30px;
-   width: 90px;
-   cursor:pointer;
-   border: orange;
-   border-radius: 0px;
-   color:white;
-   margin: 6px 10px 0px 10px;
-}
-
-.response-button:hover {
-   background-color: darkorange;
-   color:white;
-}
-
-.response-info {
-  /*background:#3E3E3E;*/
-  height: 100%;
-  padding: 0;
-  margin:0 0 5px 0;
-}
-
-.response-media-column {
-  height: 100%;
-  padding: 0;
-}
-
-.all-response-data {
-   margin-left: 0px;
-  margin-right: 0px;
-}
-
-.response-title-row {
-  margin-top:15px;
-  font-size: 1em;
-  height: 25%
-}
-
-.response-username-row {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: 15px;
-  font-size: 0.8em;
-}
-
-.original-back-button-row {
-  margin-top: 20px;
-  color: white;
-}
-
-.original-back-button {
+.original-back-button{
   height: 30px;
   cursor: pointer;
-  /*margin-top: 55px;*/
   color:white;
   padding: 5px;
+  background-color:#16a79d;
 }
 
 .original-back-button:hover {
-   color: orange;
-}
-
-.one-response {
-  margin: 5px;
-  min-width: 125px;
-  height: 100%;
-  border: gray  1px solid;
-  border-radius: 5px;
-  background: white;
-}
-
-.response-data > li {
-  display: block;
-  padding: 15px 10px 15px 10px;
+  color: white;
+  background-color: orange;
 }
 
 .current-viewing-title-row {
