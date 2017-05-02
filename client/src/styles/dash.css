@@ -4,7 +4,6 @@ body {
 
 .category-title-row {
   margin-top: 50px;
-  height: 60px;
   color:black;
 } 
 
@@ -12,3 +11,6 @@ body {
   color: #16a79d;
 }
 
+.main-contents{
+  margin-top: -20px;
+}

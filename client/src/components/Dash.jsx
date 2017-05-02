@@ -84,19 +84,16 @@ class Dash extends React.Component {
       <div className="container-fluid">
         <NavBar auth={this.props.auth} handleLogout={this.props.handleLogout} editProfile={this.props.editProfile}/>
           
-          <div className="row first-row"> 
-            <div className="col-md-2 hidden-sm hidden-xs left-fixed">
-              <SideNav />
-            </div>
-          </div>
-
-          <div className="row category-title-row">
-            <div className="col-md-3 col-md-offset-5 text-center">{whichCategory()}</div>
-            <div className="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-              <div className="row">
-                  <ChallengeList dispatch={this.props.dispatch} />
+          <div className="row first-row">
+              <div className="row category-title-row">
+                <div className="col-md-12 text-center">{whichCategory()}</div>
               </div>
-            </div>
+            <div className="col-md-12 main-contents">
+              <div className="col-md-2 col-sm-3 left-fixed">
+                <SideNav />
+              </div>
+              <ChallengeList dispatch={this.props.dispatch} />                 
+            </div> 
           </div>
       </div>
     );
