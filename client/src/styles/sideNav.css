@@ -5,8 +5,11 @@
 }*/
 
 .left-fixed {
-  position: fixed;
-  height: 100vh;
+  /*position: fixed;*/
+  margin-top:-35px;
+  height: 560px;
+  max-width: 50%;
+  min-width:200px;
   /*background: #414141;*/
 }
 

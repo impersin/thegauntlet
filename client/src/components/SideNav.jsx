@@ -46,7 +46,7 @@ class SideNav extends React.Component {
 
   render() {
     return (
-      <div className="side-nav">
+      <div className="col-md-offset-0 col-sm-offset-0 col-xs-offset-6 side-nav">
         <form className="input-group" onSubmit={ (e)=> this.challengeSearch(e)}>
           <span className="input-group-btn">
             <button className="btn btn-default" onClick={(e) => this.challengeSearch(e) }><span className="glyphicon glyphicon-search"></span></button>
