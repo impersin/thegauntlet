@@ -1,14 +1,33 @@
 
+.media{
+  /*margin-left:100px;
+  min-width: 500px;*/
+  /*background-color: #ededed;*/
+  margin-top:35px;
+  width:66%;
+  margin-left:23%;
+}
 .one-challenge {
-  height: 50vh;
+  max-width:300px;
+  max-height:300px;
+  min-width:200px;
+  min-height:300px;
   border: 1px solid grey;
-  margin: 20px;
+  margin: 5px;
   background: white;
   overflow: auto;
+  }
+  .one-challenge:hover {
+  top: 2px;
+  /*-webkit-box-shadow: 0 0 0 #2CADAD;
+  -moz-box-shadow: 0 0 0 #2CADAD;*/
+  box-shadow: 1px 1px 1px #16a79d;
 }
+  
+  
 
 .challenge-title-row {
-  height: 20%;
+  height: 20px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -16,7 +35,7 @@
 }
 
 .challenge-media-row {
-  height: 50%;
+  /*height: 50%;*/
 }
 
 .challenge-list-media {
