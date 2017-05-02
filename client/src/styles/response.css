@@ -112,5 +112,6 @@ a:hover{
   background-color: black;
 }
 .resMedia-image,.parentMedia-image{
-
+  width:150px !important;
+  height:150px !important;
 }
