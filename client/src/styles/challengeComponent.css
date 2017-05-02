@@ -22,8 +22,8 @@ li {
 }
 
 .current-media-row {
-  border-left:gray solid 2px;
-  border-right:gray solid 2px;
+  border-left:gray solid 1px;
+  border-right:gray solid 1px;
   height: 50vh;
 }
 
@@ -36,9 +36,9 @@ li {
   padding: 15px;
   font-size: 1em;
   background: white;
-  border-right:gray solid 2px;
-  border-left:gray solid 2px;
-  border-bottom:gray solid 2px;
+  border-right:gray solid 1px;
+  border-left:gray solid 1px;
+  border-bottom:gray solid 1px;
 }
 
 .current-info-timestamp {
@@ -151,9 +151,9 @@ textarea {
 }
 
 .current-viewing-title-row {
-  border-right:gray solid 2px;
-  border-left:gray solid 2px;
-  border-top:gray solid 2px;
+  border-right:gray solid 1px;
+  border-left:gray solid 1px;
+  border-top:gray solid 1px;
   min-height: 10vh;
   background: white;
   color: orange
