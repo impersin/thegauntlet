@@ -245,8 +245,7 @@ class ChallengeList extends React.Component {
 
     if (this.props.currentCategory === 'LeaderBoard') {
       return (
-        <div className="col-md-12 leader-container">
-          {/*<h1 className="text-center leaderBoard-title"></h1>*/}
+        <div className="col-md-8 col-sm-6 leader-container">
           <img className="animated bounce infinite" id="leader-img" src="https://badgeos.org/wp-content/uploads/edd/2013/11/leaderboard-300x300.png" alt=""/>
             <table className="table table-nonfluid">
               <thead>

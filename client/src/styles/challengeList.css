@@ -9,7 +9,7 @@
 }
 .one-challenge {
   max-width:300px;
-  max-height:300px;
+  height:30vh;
   min-width:200px;
   min-height:300px;
   border: 1px solid grey;
@@ -35,7 +35,7 @@
 }
 
 .challenge-media-row {
-  /*height: 50%;*/
+  height: 50%;
 }
 
 .challenge-list-media {
@@ -78,7 +78,7 @@ social-button.active {
 }
 
 .leader-container{
-  margin-left:-8%;
+  margin:50px 0 0 50px;
 }
 
 #medal{
