@@ -1,4 +1,5 @@
 # Thegauntlet
+<a href="https://playgauntlet.herokuapp.com/#/">playgauntlet.herokuapp.com<a/>
 
 <img src="https://s3-us-west-1.amazonaws.com/taegyudocs/thegauntletLanding.png" width="680px" height="380">
 
