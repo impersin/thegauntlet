@@ -450,7 +450,6 @@ class ProfileContent extends React.Component {
         user_id: window.sessionStorage.newUser_id
       },
       success: function(data) {
-        console.log('data from delete response', data)
         if (post.parent_id === null) {
           outer.props.dispatch(actions.getChallenges(data));
         } else {
@@ -530,7 +529,7 @@ class ProfileContent extends React.Component {
       if (challenge) {
         if (challenge.username === this.props.user[0].username) {
           return (
-            <div className="col-md-3 col-md-offset-2 text-center one-challenge one-challenge-in-profile" key={j}>
+            <div className="col-md-3 col-md-offset-2 col-sm-3 col-xs-3 col-xs-offset-0 text-center one-challenge one-challenge-in-profile" key={j}>
             <div className="row profile-edit-buttons">
               <span className='pull-right'>{this.taskButtons(challenge, j)}</span>
             </div>
@@ -899,29 +898,27 @@ class ProfileContent extends React.Component {
     if (target) {
       return (
         <div className="row overallContent">
-          <div className='col-lg-3 profileContainer'>
-            <div id='picContainer' className="row">
-              <img className='col-lg- 12 profilePic' src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + this.props.user[0].profilepic} onClick={() =>{ if (isUserImageClickable(target)) { this.state.display === 'none' ? this.setState({display: 'unset'}) : this.setState({display: 'none'}); } }}/>
+          <div className='col-md-3 col-sm-3 col-xs-12 profileContainer'>
+            <div id='picContainer' className="col-md-3 x col-sm-3 col-sm-offset-0 col-xs-3 col-xs-offset-4 ">
+              <img className='profilePic' src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + this.props.user[0].profilepic} onClick={() =>{ if (isUserImageClickable(target)) { this.state.display === 'none' ? this.setState({display: 'unset'}) : this.setState({display: 'none'}); } }}/>
             </div>
             <span className='editPic' style={{display: this.state.display}}>
               <form id='pic'>
                 <input type="file" placeholder="image" ref="video" name="video" onChange={()=> { this.editProfileImage(this.props.user[0].scott); }} />
               </form>
             </span>
-            <div className="row profileInfo">
-              <div className="col-lg-12">
+            <div className=" col-md-offset-2 col-sm-offset-3 col-xs-offset-5 profileInfo">
               Username: {target} <br />
               {editField(this.props.user[0].firstname, this.props.user[0].scott, target, 'firstname', 'first', 'Firstname')}
               {editField(this.props.user[0].lastname, this.props.user[0].scott, target, 'lastname', 'second', 'Lastname')}
               {editField(this.props.user[0].email, this.props.user[0].scott, target, 'email', 'third', 'Email')}
               Rank# {this.handleRanks(target)}
-               ({this.props.user[0].upvotes}) <br />
+               ({this.props.user[0].upvotes})<br /> 
               Followers: {this.props.followers.length} {whichFollowButton(this.props, this.props.user[0].scott, target, this)} <br />
               {sendMessage()}
               </div>
-            </div>
-          </div><br/>
-          <div className="col-lg-8">
+          </div>
+          <div className="col-md-8 col-md-offset-0 col-sm-8 col-sm-offset-1 col-xs-12 test fixed">
             <ul className="nav nav-tabs">
               {renderTab('all', '#home', 'Challenges')}
               {renderTab('responses', '#menu1', 'Responses')}
