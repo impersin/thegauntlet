@@ -21,13 +21,13 @@ let whichFollowButton = (state, leaderId, user, context) => {
   if (window.sessionStorage.username !== user) {
     if (state.leaders.includes(leaderId)) {
       return (
-        <button className="btn btn-default btn-sm pull-right follower"onClick={() => context.unFollow(leaderId)}>
+        <button className="btn btn-default btn-sm follower"onClick={() => context.unFollow(leaderId)}>
           <span className="glyphicon glyphicon-ok"></span>{'  Unfollow'}
         </button>
       );
     } else {
       return (
-        <button className="btn btn-default btn-sm pull-right follower" onClick={() => context.followTheLeader(leaderId)}>
+        <button className="btn btn-default btn-sm follower" onClick={() => context.followTheLeader(leaderId)}>
           <span className="glyphicon glyphicon-ok"></span>{'  Follow'}
         </button>
       );
