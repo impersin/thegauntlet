@@ -63,8 +63,10 @@ module.exports = {
               if (pass) {
                 req.session.displayName = username;
                 req.session.save(() => {
+                  //db.select('session_id').from('sessions').then(data =>{ req.session.id = data[0].session_id ;});
                   db.select('users.scott', 'users.firstname', 'users.lastname', 'users.email', 'users.profilepic', 'users.username', 'users.followers', 'users.upvotes').from('users').where('users.username', '=', username)
                     .then(data => {
+                     // console.log(req);
                       res.json(data[data.length - 1]);
                     });
                 });
