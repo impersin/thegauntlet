@@ -39,7 +39,7 @@
 }
 
 .profileContainer {
-  height: 90vh;
+  height: 60vh;
 }
 
 #picContainer {
@@ -47,8 +47,8 @@
 }
 
 .profileInfo {
-  font-size: 20px;
-  margin-top: 34px;
+  font-size: 17px;
+  width: 170px;
 }
 
 .task-buttons {
@@ -87,8 +87,8 @@ challenge-media-row {
 }
 
 .profilePic{
-  height: 40vh;
-  width: 40vh;
+  height:200px;
+  width: 200px;
   margin: 15px;
   border-radius: 50%;
   display: block;
@@ -158,3 +158,8 @@ li>a {
 .challenge-inprofile {
   font-size: 1em;
 }
+
+/*.fixed {
+    position: fixed;
+    margin-left:300px;
+}*/
