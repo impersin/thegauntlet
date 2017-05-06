@@ -215,7 +215,11 @@ class ChallengeList extends React.Component {
               <h5 onClick={() => this.onChallengeTitleClick(challenge)} className="challenge-title"><Link to={'/challenge'}>{challenge.title}</Link></h5>
             </div>  
             <div className="row challenge-media-row">
+            <a href="javascript: void(0)" onClick={() => this.onChallengeTitleClick(challenge)} >
+              <Link to={'/challenge'}>
               {checkFile(challenge.filename.split('.').pop(), challenge)}<br/>
+              </Link>
+            </a>
             </div>
             <div className="row category-row">
               <span className="category-tab">{challenge.category}</span>
