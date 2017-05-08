@@ -25,6 +25,7 @@ li {
   border-left:gray solid 1px;
   border-right:gray solid 1px;
   height: 50vh;
+  background-color: white;
 }
 
 .timestamp {
@@ -39,6 +40,7 @@ li {
   border-right:gray solid 1px;
   border-left:gray solid 1px;
   border-bottom:gray solid 1px;
+  margin-top:-50px;
 }
 
 .current-info-timestamp {

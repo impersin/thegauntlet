@@ -90,7 +90,9 @@ class ResponseComponent extends React.Component {
       return (
         <div className="one-response row">
           <div className="col-md-8 col-sm-6 col-xs-8 response-info">
+            <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>
             {checkFile(this.props.response.filename.split('.').pop(), this.props.response)}
+            </a>
           </div>
           <div className="col-md-4 col-sm-6 col-xs-3 response-info text-center">
             <div className="row all-response-data response-title-row">
@@ -103,9 +105,7 @@ class ResponseComponent extends React.Component {
               {voteButtons(this.props, this.props.response.id, this.props.response.upvotes, this, 'btn-md')}
             </div>
             <div className="row all-response-data response-watch-row">
-              <button className="" id="watch-btn">
-                <a href="javasript:void(0)" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>WATCH</a>
-              </button>
+              <button className="" id="watch-btn" onClick={() => { this.props.onResponseTitleClick(this.props.response); }}>WATCH</button>
             </div>
           </div>
         </div>

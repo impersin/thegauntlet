@@ -14,6 +14,7 @@ a:hover{
   border: orange;
   border-radius: 0px;
   margin:0 0 0 0;
+  color:white;
 }
 #watch-btn>a{
   color: white;
@@ -37,7 +38,7 @@ a:hover{
 
 .response-list {
   height: 100%;
-  overflow-y: scroll
+  overflow-y: scroll;
 }
 
 .response-button {
