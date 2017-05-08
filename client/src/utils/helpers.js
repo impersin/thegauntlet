@@ -78,13 +78,14 @@ let voteButtons = (store, challengeId, upvotes, context, size) => {
 let checkFile = (type, challenge) => {
   const fileType = {
     'mp4': 'THIS IS A VIDEO!',
-    'mov': 'THIS WORKS TOO'
+    'mov': 'THIS WORKS TOO',
+    'MOV': 'this too'
   };
+
   if (fileType[type.toLowerCase()]) {
     return (
-      <video className="parentMedia parentMedia-video" controls>
-        {<source src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} type="video/mp4"/>}
-      </video>);
+      <video className="parentMedia parentMedia-video" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} controls/>
+    );
   } else {
     return <img className="parentMedia parentMedia-image" src={'https://s3-us-west-1.amazonaws.com/playgauntlet/' + challenge.filename} />;
   }
