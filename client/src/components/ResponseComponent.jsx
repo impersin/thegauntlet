@@ -90,7 +90,7 @@ class ResponseComponent extends React.Component {
       return (
         <div className="one-response row">
           <div className="col-md-8 col-sm-6 col-xs-8 response-info">
-            {checkResFile(this.props.response.filename.split('.').pop(), this.props.response)}
+            {checkFile(this.props.response.filename.split('.').pop(), this.props.response)}
           </div>
           <div className="col-md-4 col-sm-6 col-xs-3 response-info text-center">
             <div className="row all-response-data response-title-row">
